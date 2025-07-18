@@ -75,6 +75,7 @@ function Sidebar(props: SidebarProps) {
             </button>
           </div>
 
+<<<<<<< HEAD
           {/* Profile Section */}
           <div class="text-center mb-6 lg:mb-8 mt-12 lg:mt-0">
             <div class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl lg:text-3xl">
@@ -131,6 +132,31 @@ function Sidebar(props: SidebarProps) {
                 <Fa icon={faGithub} class="text-lg lg:text-xl" />
               </a>
             </div>
+=======
+        {/* Contact Info */}
+        <div class="absolute bottom-6 left-6 right-6">
+          <div class="flex justify-center space-x-4">
+            <a href="mailto:carlo.barnardo@gmail.com" class={`transition-colors ${
+              props.isDarkMode ? 'text-gray-400 hover:text-yellow-400' : 'text-slate-400 hover:text-amber-500'
+            }`} title="Email">
+              <Fa icon={faEnvelope} class="text-lg" />
+            </a>
+            <a href="tel:0783902780" class={`transition-colors ${
+              props.isDarkMode ? 'text-gray-400 hover:text-yellow-400' : 'text-slate-400 hover:text-amber-500'
+            }`} title="Phone">
+              <Fa icon={faPhone} class="text-lg" />
+            </a>
+            <a href="https://www.linkedin.com/in/carlo-barnardo-563874aa/" class={`transition-colors ${
+              props.isDarkMode ? 'text-gray-400 hover:text-yellow-400' : 'text-slate-400 hover:text-amber-500'
+            }`} title="LinkedIn">
+              <Fa icon={faLinkedin} class="text-lg" />
+            </a>
+            <a href="https://github.com/IncredibleZuess" class={`transition-colors ${
+              props.isDarkMode ? 'text-gray-400 hover:text-yellow-400' : 'text-slate-400 hover:text-amber-500'
+            }`} title="GitHub">
+              <Fa icon={faGithub} class="text-lg" />
+            </a>
+>>>>>>> 9587c0c6f0ce4d18fa3cb4c1b742bbeaca830e99
           </div>
         </div>
       </aside>

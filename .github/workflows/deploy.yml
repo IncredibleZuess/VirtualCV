@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
-
+permissions:
+  contents: write
 on:
   push:
     branches: [ main ]
@@ -37,7 +38,7 @@ jobs:
           ${{ runner.os }}-pnpm-store-
         
     - name: Install dependencies
-      run: pnpm install --frozen-lockfile
+      run: pnpm install
       
     - name: Build
       run: pnpm run build

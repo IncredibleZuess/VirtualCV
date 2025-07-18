@@ -1,36 +1,46 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
+import { createSignal, Show } from 'solid-js'
 import './App.css'
+import SplashScreen from './components/SplashScreen'
+import Sidebar from './components/Sidebar'
+import HomePage from './components/HomePage'
+import AboutPage from './components/AboutPage'
+import ProjectsPage from './components/ProjectsPage'
+import InterestsPage from './components/InterestsPage'
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [showSplash, setShowSplash] = createSignal(true)
+  const [activeSection, setActiveSection] = createSignal('home')
+
+  const renderContent = () => {
+    switch (activeSection()) {
+      case 'about':
+        return <AboutPage />
+      case 'projects':
+        return <ProjectsPage />
+      case 'interests':
+        return <InterestsPage />
+      default:
+        return <HomePage />
+    }
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={solidLogo} class="logo solid" alt="Solid logo" />
-        </a>
-      </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count()}
-        </button>
-        <p>
-          working with solid for the first time now testing HMR
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
+      <Show when={showSplash()}>
+        <SplashScreen onComplete={() => setShowSplash(false)} />
+      </Show>
+      
+      <Show when={!showSplash()}>
+        <div class="min-h-screen bg-gradient-to-br from-slate-100 via-slate-50 to-amber-50">
+          <Sidebar activeSection={activeSection()} setActiveSection={setActiveSection} />
+          
+          <main class="ml-64 p-8">
+            <div class="max-w-6xl mx-auto">
+              {renderContent()}
+            </div>
+          </main>
+        </div>
+      </Show>
     </>
   )
 }

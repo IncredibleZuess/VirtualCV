@@ -74,7 +74,7 @@ function Sidebar(props: SidebarProps) {
         {/* Contact Info */}
         <div class="absolute bottom-6 left-6 right-6">
           <div class="flex justify-center space-x-4">
-            <a href="mailto:carlodevs@gmail.com" class={`transition-colors ${
+            <a href="mailto:carlo.barnardo@gmail.com" class={`transition-colors ${
               props.isDarkMode ? 'text-gray-400 hover:text-yellow-400' : 'text-slate-400 hover:text-amber-500'
             }`} title="Email">
               <Fa icon={faEnvelope} class="text-lg" />

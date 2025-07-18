@@ -20,13 +20,13 @@ function SplashScreen(props: SplashScreenProps) {
   })
 
   return (
-    <div class={`fixed inset-0 bg-gradient-to-br from-amber-900 via-amber-800 to-amber-900 flex items-center justify-center transition-opacity duration-500 ${
+    <div class={`fixed inset-0 bg-gradient-to-br from-amber-900 via-amber-800 to-amber-900 flex items-center justify-center transition-opacity duration-500 px-4 ${
       fadeOut() ? 'opacity-0' : 'opacity-100'
     }`}>
       <div class="text-center">
         {/* Coffee Cup */}
-        <div class="relative mb-8">
-          <div class="w-32 h-32 mx-auto relative">
+        <div class="relative mb-6 lg:mb-8">
+          <div class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 mx-auto relative">
             {/* Cup */}
             <div class="absolute bottom-0 w-24 h-20 bg-white rounded-b-full mx-auto left-1/2 transform -translate-x-1/2">
               <div class="absolute inset-2 bg-amber-800 rounded-b-full"></div>

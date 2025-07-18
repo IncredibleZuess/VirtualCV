@@ -112,10 +112,10 @@ function InterestsPage() {
   ]
 
   return (
-    <div class="space-y-8">
+    <div class="space-y-6 lg:space-y-8 px-4">
       <section class="text-center">
-        <h1 class="text-4xl font-bold text-slate-800 mb-4">My Interests</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-monokai-50 mb-3 lg:mb-4">My Interests</h1>
+        <p class="text-base lg:text-xl text-slate-600 dark:text-monokai-200 max-w-2xl mx-auto leading-relaxed">
           Beyond coding, I have a variety of interests that keep me curious and motivated. 
           These hobbies and passions often inspire my work and help me approach problems 
           from different perspectives.
@@ -124,9 +124,9 @@ function InterestsPage() {
 
       {/* Interests by Category */}
       {interests.map((category) => (
-        <section class="bg-white rounded-2xl p-8 shadow-lg">
-          <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center flex items-center justify-center">
-            <span class="mr-3 text-4xl">{category.icon}</span>
+        <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-8 shadow-lg">
+          <h2 class="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-6 lg:mb-8 text-center flex items-center justify-center">
+            <span class="mr-3 text-3xl lg:text-4xl">{category.icon}</span>
             {category.category}
           </h2>
           

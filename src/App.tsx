@@ -64,9 +64,11 @@ function App() {
             toggleTheme={() => setIsDarkMode(!isDarkMode())}
           />
           
-          <main class="ml-64 p-8">
-            <div class="max-w-6xl mx-auto">
-              {renderContent()}
+          <main class="lg:ml-64 min-h-screen">
+            <div class="p-4 lg:p-8">
+              <div class="max-w-6xl mx-auto">
+                {renderContent()}
+              </div>
             </div>
           </main>
         </div>

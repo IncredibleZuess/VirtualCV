@@ -1,53 +1,53 @@
 function HomePage() {
   return (
-    <div class="space-y-8">
+    <div class="space-y-6 lg:space-y-8">
       {/* Hero Section */}
-      <section class="text-center py-12">
-        <h1 class="text-5xl font-bold text-slate-800 dark:text-monokai-50 mb-4">
+      <section class="text-center py-8 lg:py-12 px-4">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 dark:text-monokai-50 mb-4">
           Hello, I'm <span class="text-amber-600 dark:text-monokai-400">Carlo Barnardo</span>
         </h1>
-        <div class="mb-6">
-          <p class="text-2xl font-semibold text-slate-700 dark:text-monokai-100 mb-2">BSc IT Student & Cybersecurity Enthusiast</p>
-          <p class="text-lg text-slate-500 dark:text-monokai-200">North-West University • South Africa</p>
+        <div class="mb-4 lg:mb-6">
+          <p class="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-700 dark:text-monokai-100 mb-2">BSc IT Student & Cybersecurity Enthusiast</p>
+          <p class="text-base lg:text-lg text-slate-500 dark:text-monokai-200">North-West University • South Africa</p>
         </div>
-        <p class="text-xl text-slate-600 dark:text-monokai-200 mb-8 max-w-2xl mx-auto">
+        <p class="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-monokai-200 mb-6 lg:mb-8 max-w-2xl mx-auto leading-relaxed">
           Passionate about cybersecurity, reverse engineering, and building innovative digital solutions. 
           Currently specializing in network security, penetration testing, and open-source development. 
           Always eager to learn and collaborate on challenging projects.
         </p>
-        <div class="flex justify-center space-x-4 mb-8">
-          <button class="bg-amber-600 dark:bg-monokai-400 text-white dark:text-monokai-900 px-6 py-3 rounded-lg hover:bg-amber-700 dark:hover:bg-monokai-500 transition-colors font-medium">
+        <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-6 lg:mb-8">
+          <button class="bg-amber-600 dark:bg-monokai-400 text-white dark:text-monokai-900 px-6 py-3 rounded-lg hover:bg-amber-700 dark:hover:bg-monokai-500 transition-colors font-medium w-full sm:w-auto">
             View My Projects
           </button>
-          <button class="border-2 border-amber-600 dark:border-monokai-400 text-amber-600 dark:text-monokai-400 px-6 py-3 rounded-lg hover:bg-amber-600 dark:hover:bg-monokai-400 hover:text-white dark:hover:text-monokai-900 transition-colors font-medium">
+          <button class="border-2 border-amber-600 dark:border-monokai-400 text-amber-600 dark:text-monokai-400 px-6 py-3 rounded-lg hover:bg-amber-600 dark:hover:bg-monokai-400 hover:text-white dark:hover:text-monokai-900 transition-colors font-medium w-full sm:w-auto">
             Get In Touch
           </button>
         </div>
         
         {/* Professional Status */}
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-monokai-900 dark:to-monokai-800 rounded-xl p-6 max-w-4xl mx-auto">
-          <div class="grid md:grid-cols-3 gap-4 text-center">
-            <div class="flex items-center justify-center space-x-2">
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-monokai-900 dark:to-monokai-800 rounded-xl p-4 lg:p-6 max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 text-center">
+            <div class="flex items-center justify-center space-x-2 p-2">
               <span class="text-green-500 dark:text-monokai-400 text-xl">🟢</span>
-              <span class="text-slate-700 dark:text-monokai-100 font-medium">Open to Opportunities</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium text-sm lg:text-base">Open to Opportunities</span>
             </div>
-            <div class="flex items-center justify-center space-x-2">
+            <div class="flex items-center justify-center space-x-2 p-2">
               <span class="text-blue-500 dark:text-monokai-500 text-xl">📚</span>
-              <span class="text-slate-700 dark:text-monokai-100 font-medium">Currently Studying</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium text-sm lg:text-base">Currently Studying</span>
             </div>
-            <div class="flex items-center justify-center space-x-2">
+            <div class="flex items-center justify-center space-x-2 p-2">
               <span class="text-purple-500 dark:text-monokai-800 text-xl">🤝</span>
-              <span class="text-slate-700 dark:text-monokai-100 font-medium">Available for Collaboration</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium text-sm lg:text-base">Available for Collaboration</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Preview */}
-      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-8 shadow-lg">
-        <h2 class="text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-6 text-center">What I Do</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="text-center p-6">
+      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-8 shadow-lg">
+        <h2 class="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-4 lg:mb-6 text-center">What I Do</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          <div class="text-center p-4 lg:p-6">
             <div class="text-4xl mb-4">🔒</div>
             <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">Cybersecurity</h3>
             <p class="text-slate-600 dark:text-monokai-200">Exploring offensive security tools, network scanning, and penetration testing techniques</p>

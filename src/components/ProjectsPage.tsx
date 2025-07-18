@@ -106,10 +106,10 @@ function ProjectsPage() {
   }
 
   return (
-    <div class="space-y-8">
+    <div class="space-y-6 lg:space-y-8 px-4">
       <section class="text-center">
-        <h1 class="text-4xl font-bold text-slate-800 mb-4">My Projects</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-monokai-50 mb-3 lg:mb-4">My Projects</h1>
+        <p class="text-base lg:text-xl text-slate-600 dark:text-monokai-200 max-w-2xl mx-auto leading-relaxed">
           Here's a collection of projects I've worked on, ranging from cybersecurity tools 
           to web development. Each project represents a learning journey and exploration 
           of different technologies, with a focus on security and innovation.
@@ -117,35 +117,35 @@ function ProjectsPage() {
       </section>
 
       {/* Filter Section */}
-      <section class="bg-white rounded-2xl p-6 shadow-lg">
-        <div class="flex flex-wrap justify-center gap-4">
-          <button class="px-4 py-2 bg-amber-600 text-white rounded-lg font-medium">All Projects</button>
-          <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-300 transition-colors">Game Development</button>
-          <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-300 transition-colors">Web Development</button>
-          <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-300 transition-colors">University Projects</button>
-          <button class="px-4 py-2 bg-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-300 transition-colors">Cybersecurity</button>
+      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-6 shadow-lg">
+        <div class="flex flex-wrap justify-center gap-2 lg:gap-4">
+          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-amber-600 dark:bg-monokai-400 text-white dark:text-monokai-900 rounded-lg font-medium text-sm lg:text-base">All Projects</button>
+          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Game Development</button>
+          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Web Development</button>
+          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">University Projects</button>
+          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Cybersecurity</button>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {projects.map((project) => (
-          <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="bg-white dark:bg-monokai-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             {/* Project Image/Icon */}
-            <div class="h-48 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-              <span class="text-6xl">{project.image}</span>
+            <div class="h-40 lg:h-48 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
+              <span class="text-5xl lg:text-6xl">{project.image}</span>
             </div>
             
             {/* Project Content */}
-            <div class="p-6">
+            <div class="p-4 lg:p-6">
               <div class="flex justify-between items-start mb-3">
-                <h3 class="text-xl font-bold text-slate-800">{project.title}</h3>
+                <h3 class="text-lg lg:text-xl font-bold text-slate-800 dark:text-monokai-50 leading-tight">{project.title}</h3>
                 <span class={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
                   {project.status}
                 </span>
               </div>
               
-              <p class="text-slate-600 mb-4 line-clamp-3">{project.description}</p>
+              <p class="text-slate-600 dark:text-monokai-200 mb-4 line-clamp-3 text-sm lg:text-base leading-relaxed">{project.description}</p>
               
               {/* Technologies */}
               <div class="flex flex-wrap gap-2 mb-4">

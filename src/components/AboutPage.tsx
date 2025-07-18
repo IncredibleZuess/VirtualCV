@@ -1,20 +1,20 @@
 function AboutPage() {
   return (
-    <div class="space-y-8">
-      <section class="bg-white rounded-2xl p-8 shadow-lg">
-        <h1 class="text-4xl font-bold text-slate-800 mb-8 text-center">About Me</h1>
+    <div class="space-y-6 lg:space-y-8 px-4">
+      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-8 shadow-lg">
+        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-monokai-50 mb-6 lg:mb-8 text-center">About Me</h1>
         
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div class="w-64 h-64 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <span class="text-8xl">👨‍💻</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full mx-auto mb-4 lg:mb-6 flex items-center justify-center">
+              <span class="text-6xl lg:text-8xl">👨‍💻</span>
             </div>
           </div>
           
-          <div class="space-y-6">
-            <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 mb-6">
-              <h3 class="text-2xl font-semibold text-slate-800 mb-4">Professional Summary</h3>
-              <p class="text-lg text-slate-700 leading-relaxed">
+          <div class="space-y-4 lg:space-y-6 order-1 lg:order-2">
+            <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-monokai-900 dark:to-monokai-800 rounded-xl p-4 lg:p-6 mb-4 lg:mb-6">
+              <h3 class="text-xl lg:text-2xl font-semibold text-slate-800 dark:text-monokai-50 mb-3 lg:mb-4">Professional Summary</h3>
+              <p class="text-base lg:text-lg text-slate-700 dark:text-monokai-100 leading-relaxed">
                 BSc IT student at North-West University with proven teaching and mentoring experience. 
                 MATLAB certified with strong programming skills in Python, C#, and Java. 
                 Award-winning cybersecurity competitor and Golden Key member with a passion for 

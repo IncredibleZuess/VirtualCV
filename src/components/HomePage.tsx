@@ -3,135 +3,135 @@ function HomePage() {
     <div class="space-y-8">
       {/* Hero Section */}
       <section class="text-center py-12">
-        <h1 class="text-5xl font-bold text-slate-800 mb-4">
-          Hello, I'm <span class="text-amber-600">Carlo Barnardo</span>
+        <h1 class="text-5xl font-bold text-slate-800 dark:text-monokai-50 mb-4">
+          Hello, I'm <span class="text-amber-600 dark:text-monokai-400">Carlo Barnardo</span>
         </h1>
         <div class="mb-6">
-          <p class="text-2xl font-semibold text-slate-700 mb-2">BSc IT Student & Cybersecurity Enthusiast</p>
-          <p class="text-lg text-slate-500">North-West University • South Africa</p>
+          <p class="text-2xl font-semibold text-slate-700 dark:text-monokai-100 mb-2">BSc IT Student & Cybersecurity Enthusiast</p>
+          <p class="text-lg text-slate-500 dark:text-monokai-200">North-West University • South Africa</p>
         </div>
-        <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+        <p class="text-xl text-slate-600 dark:text-monokai-200 mb-8 max-w-2xl mx-auto">
           Passionate about cybersecurity, reverse engineering, and building innovative digital solutions. 
           Currently specializing in network security, penetration testing, and open-source development. 
           Always eager to learn and collaborate on challenging projects.
         </p>
         <div class="flex justify-center space-x-4 mb-8">
-          <button class="bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors font-medium">
+          <button class="bg-amber-600 dark:bg-monokai-400 text-white dark:text-monokai-900 px-6 py-3 rounded-lg hover:bg-amber-700 dark:hover:bg-monokai-500 transition-colors font-medium">
             View My Projects
           </button>
-          <button class="border-2 border-amber-600 text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-600 hover:text-white transition-colors font-medium">
+          <button class="border-2 border-amber-600 dark:border-monokai-400 text-amber-600 dark:text-monokai-400 px-6 py-3 rounded-lg hover:bg-amber-600 dark:hover:bg-monokai-400 hover:text-white dark:hover:text-monokai-900 transition-colors font-medium">
             Get In Touch
           </button>
         </div>
         
         {/* Professional Status */}
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-monokai-900 dark:to-monokai-800 rounded-xl p-6 max-w-4xl mx-auto">
           <div class="grid md:grid-cols-3 gap-4 text-center">
             <div class="flex items-center justify-center space-x-2">
-              <span class="text-green-500 text-xl">🟢</span>
-              <span class="text-slate-700 font-medium">Open to Opportunities</span>
+              <span class="text-green-500 dark:text-monokai-400 text-xl">🟢</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium">Open to Opportunities</span>
             </div>
             <div class="flex items-center justify-center space-x-2">
-              <span class="text-blue-500 text-xl">📚</span>
-              <span class="text-slate-700 font-medium">Currently Studying</span>
+              <span class="text-blue-500 dark:text-monokai-500 text-xl">📚</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium">Currently Studying</span>
             </div>
             <div class="flex items-center justify-center space-x-2">
-              <span class="text-purple-500 text-xl">🤝</span>
-              <span class="text-slate-700 font-medium">Available for Collaboration</span>
+              <span class="text-purple-500 dark:text-monokai-800 text-xl">🤝</span>
+              <span class="text-slate-700 dark:text-monokai-100 font-medium">Available for Collaboration</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Preview */}
-      <section class="bg-white rounded-2xl p-8 shadow-lg">
-        <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">What I Do</h2>
+      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-8 shadow-lg">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-6 text-center">What I Do</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div class="text-center p-6">
             <div class="text-4xl mb-4">🔒</div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Cybersecurity</h3>
-            <p class="text-slate-600">Exploring offensive security tools, network scanning, and penetration testing techniques</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">Cybersecurity</h3>
+            <p class="text-slate-600 dark:text-monokai-200">Exploring offensive security tools, network scanning, and penetration testing techniques</p>
           </div>
           <div class="text-center p-6">
             <div class="text-4xl mb-4">🔍</div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Reverse Engineering</h3>
-            <p class="text-slate-600">Analyzing software and systems to understand their inner workings and vulnerabilities</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">Reverse Engineering</h3>
+            <p class="text-slate-600 dark:text-monokai-200">Analyzing software and systems to understand their inner workings and vulnerabilities</p>
           </div>
           <div class="text-center p-6">
             <div class="text-4xl mb-4">💻</div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Development</h3>
-            <p class="text-slate-600">Building web applications and tools using modern frameworks and technologies</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">Development</h3>
+            <p class="text-slate-600 dark:text-monokai-200">Building web applications and tools using modern frameworks and technologies</p>
           </div>
         </div>
       </section>
 
       {/* Recent Work Preview */}
-      <section class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8">
-        <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Featured Projects</h2>
+      <section class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-monokai-900 dark:to-monokai-800 rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-6 text-center">Featured Projects</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <div class="w-full h-40 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+          <div class="bg-white dark:bg-monokai-900 rounded-lg p-6 shadow-md">
+            <div class="w-full h-40 bg-gradient-to-br from-purple-400 to-purple-600 dark:from-monokai-800 dark:to-monokai-700 rounded-lg mb-4 flex items-center justify-center">
               <span class="text-white text-2xl">🚀</span>
             </div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Project Space</h3>
-            <p class="text-slate-600 mb-4">A space-themed game built with Godot Engine, showcasing game development skills and creativity.</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">Project Space</h3>
+            <p class="text-slate-600 dark:text-monokai-200 mb-4">A space-themed game built with Godot Engine, showcasing game development skills and creativity.</p>
             <div class="flex space-x-2">
-              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">GDScript</span>
-              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Godot</span>
+              <span class="px-3 py-1 bg-amber-100 dark:bg-monokai-800 text-amber-800 dark:text-monokai-400 rounded-full text-sm">GDScript</span>
+              <span class="px-3 py-1 bg-amber-100 dark:bg-monokai-800 text-amber-800 dark:text-monokai-400 rounded-full text-sm">Godot</span>
             </div>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <div class="w-full h-40 bg-gradient-to-br from-green-400 to-green-600 rounded-lg mb-4 flex items-center justify-center">
+          <div class="bg-white dark:bg-monokai-900 rounded-lg p-6 shadow-md">
+            <div class="w-full h-40 bg-gradient-to-br from-green-400 to-green-600 dark:from-monokai-700 dark:to-monokai-600 rounded-lg mb-4 flex items-center justify-center">
               <span class="text-white text-2xl">🏆</span>
             </div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">SANReN CSC Winner</h3>
-            <p class="text-slate-600 mb-4">First place achievement in the SANReN Cyber Security Competition, demonstrating advanced cybersecurity skills.</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-monokai-100 mb-2">SANReN CSC Winner</h3>
+            <p class="text-slate-600 dark:text-monokai-200 mb-4">First place achievement in the SANReN Cyber Security Competition, demonstrating advanced cybersecurity skills.</p>
             <div class="flex space-x-2">
-              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Cybersecurity</span>
-              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Competition</span>
+              <span class="px-3 py-1 bg-amber-100 dark:bg-monokai-800 text-amber-800 dark:text-monokai-400 rounded-full text-sm">Cybersecurity</span>
+              <span class="px-3 py-1 bg-amber-100 dark:bg-monokai-800 text-amber-800 dark:text-monokai-400 rounded-full text-sm">Competition</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Professional Network */}
-      <section class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 text-white">
+      <section class="bg-gradient-to-r from-slate-800 to-slate-900 dark:from-monokai-950 dark:to-monokai-900 rounded-2xl p-8 text-white">
         <h2 class="text-3xl font-bold mb-6 text-center">Let's Connect Professionally</h2>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-amber-400">Open to Professional Opportunities</h3>
-            <ul class="space-y-2 text-slate-300">
+            <h3 class="text-xl font-semibold text-amber-400 dark:text-monokai-400">Open to Professional Opportunities</h3>
+            <ul class="space-y-2 text-slate-300 dark:text-monokai-200">
               <li class="flex items-center">
-                <span class="text-amber-500 mr-2">•</span>
+                <span class="text-amber-500 dark:text-monokai-400 mr-2">•</span>
                 <span>Internships in Cybersecurity</span>
               </li>
               <li class="flex items-center">
-                <span class="text-amber-500 mr-2">•</span>
+                <span class="text-amber-500 dark:text-monokai-400 mr-2">•</span>
                 <span>Junior Developer Positions</span>
               </li>
               <li class="flex items-center">
-                <span class="text-amber-500 mr-2">•</span>
+                <span class="text-amber-500 dark:text-monokai-400 mr-2">•</span>
                 <span>Open Source Collaborations</span>
               </li>
               <li class="flex items-center">
-                <span class="text-amber-500 mr-2">•</span>
+                <span class="text-amber-500 dark:text-monokai-400 mr-2">•</span>
                 <span>Cybersecurity Research Projects</span>
               </li>
             </ul>
           </div>
           <div class="text-center">
-            <h3 class="text-xl font-semibold text-amber-400 mb-4">Connect With Me</h3>
+            <h3 class="text-xl font-semibold text-amber-400 dark:text-monokai-400 mb-4">Connect With Me</h3>
             <div class="flex justify-center space-x-4 mb-4">
               <a href="https://www.linkedin.com/in/carlo-barnardo-563874aa/" 
-                 class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors font-medium">
+                 class="bg-blue-600 dark:bg-monokai-500 hover:bg-blue-700 dark:hover:bg-monokai-600 px-6 py-3 rounded-lg transition-colors font-medium">
                 LinkedIn Profile
               </a>
               <a href="https://github.com/IncredibleZuess" 
-                 class="bg-gray-700 hover:bg-gray-800 px-6 py-3 rounded-lg transition-colors font-medium">
+                 class="bg-gray-700 dark:bg-monokai-800 hover:bg-gray-800 dark:hover:bg-monokai-700 px-6 py-3 rounded-lg transition-colors font-medium">
                 GitHub Profile
               </a>
             </div>
-            <p class="text-slate-400 text-sm">
+            <p class="text-slate-400 dark:text-monokai-300 text-sm">
               Currently building my professional network and looking for mentorship opportunities
             </p>
           </div>

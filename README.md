@@ -126,6 +126,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact
 
 Carlo Barnardo
-- Email: carlodevs@gmail.com
+- Email: carlo.barnardo@gmail.com
 - LinkedIn: [Carlo Barnardo](https://www.linkedin.com/in/carlo-barnardo-563874aa/)
 - GitHub: [IncredibleZuess](https://github.com/IncredibleZuess)

@@ -1,4 +1,8 @@
+import { createSignal, createMemo } from 'solid-js'
+
 function ProjectsPage() {
+  const [selectedFilter, setSelectedFilter] = createSignal('All Projects')
+
   const projects = [
     {
       id: 1,
@@ -92,6 +96,40 @@ function ProjectsPage() {
     }
   ]
 
+  // Filter categories
+  const filterCategories = ['All Projects', 'Game Development', 'Web Development', 'University Projects', 'Cybersecurity']
+
+  // Filtered projects based on selected filter
+  const filteredProjects = createMemo(() => {
+    if (selectedFilter() === 'All Projects') {
+      return projects
+    }
+    return projects.filter(project => {
+      const category = getProjectCategory(project)
+      return category === selectedFilter()
+    })
+  })
+
+  // Function to determine project category based on technologies and title
+  const getProjectCategory = (project: any) => {
+    const technologies = project.technologies.join(' ').toLowerCase()
+    const title = project.title.toLowerCase()
+    
+    if (technologies.includes('godot') || technologies.includes('game') || technologies.includes('gdscript')) {
+      return 'Game Development'
+    }
+    if (technologies.includes('solidjs') || technologies.includes('javascript') || technologies.includes('typescript') || technologies.includes('web') || technologies.includes('html') || technologies.includes('portfolio') || technologies.includes('blog')) {
+      return 'Web Development'
+    }
+    if (technologies.includes('university') || title.includes('cmpg') || title.includes('nwu') || technologies.includes('kotlin')) {
+      return 'University Projects'
+    }
+    if (technologies.includes('cybersecurity') || technologies.includes('security') || title.includes('sanren')) {
+      return 'Cybersecurity'
+    }
+    return 'Other'
+  }
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Completed':
@@ -108,29 +146,46 @@ function ProjectsPage() {
   return (
     <div class="space-y-6 lg:space-y-8 px-4">
       <section class="text-center">
-        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-monokai-50 mb-3 lg:mb-4">My Projects</h1>
-        <p class="text-base lg:text-xl text-slate-600 dark:text-monokai-200 max-w-2xl mx-auto leading-relaxed">
+        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-white mb-3 lg:mb-4">My Projects</h1>
+        <p class="text-base lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
           Here's a collection of projects I've worked on, ranging from cybersecurity tools 
           to web development. Each project represents a learning journey and exploration 
           of different technologies, with a focus on security and innovation.
         </p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+          Showing {filteredProjects().length} of {projects.length} projects
+        </p>
       </section>
 
       {/* Filter Section */}
-      <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-6 shadow-lg">
+      <section class="bg-white dark:bg-slate-800 rounded-2xl p-4 lg:p-6 shadow-lg">
         <div class="flex flex-wrap justify-center gap-2 lg:gap-4">
-          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-amber-600 dark:bg-monokai-400 text-white dark:text-monokai-900 rounded-lg font-medium text-sm lg:text-base">All Projects</button>
-          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Game Development</button>
-          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Web Development</button>
-          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">University Projects</button>
-          <button class="px-3 py-2 lg:px-4 lg:py-2 bg-slate-200 dark:bg-monokai-800 text-slate-700 dark:text-monokai-200 rounded-lg font-medium hover:bg-slate-300 dark:hover:bg-monokai-700 transition-colors text-sm lg:text-base">Cybersecurity</button>
+          {filterCategories.map((category) => (
+            <button 
+              onClick={() => setSelectedFilter(category)}
+              class={`px-3 py-2 lg:px-4 lg:py-2 rounded-lg font-medium text-sm lg:text-base transition-colors cursor-pointer ${
+                selectedFilter() === category 
+                  ? 'bg-amber-600 dark:bg-amber-500 text-white' 
+                  : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-        {projects.map((project) => (
-          <div class="bg-white dark:bg-monokai-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 transition-all duration-300">
+        {filteredProjects().length === 0 ? (
+          <div class="col-span-full text-center py-12">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">No projects found</h3>
+            <p class="text-slate-600 dark:text-slate-300">Try selecting a different category or view all projects.</p>
+          </div>
+        ) : (
+          filteredProjects().map((project) => (
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             {/* Project Image/Icon */}
             <div class="h-40 lg:h-48 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
               <span class="text-5xl lg:text-6xl">{project.image}</span>
@@ -139,18 +194,18 @@ function ProjectsPage() {
             {/* Project Content */}
             <div class="p-4 lg:p-6">
               <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg lg:text-xl font-bold text-slate-800 dark:text-monokai-50 leading-tight">{project.title}</h3>
+                <h3 class="text-lg lg:text-xl font-bold text-slate-800 dark:text-white leading-tight">{project.title}</h3>
                 <span class={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
                   {project.status}
                 </span>
               </div>
               
-              <p class="text-slate-600 dark:text-monokai-200 mb-4 line-clamp-3 text-sm lg:text-base leading-relaxed">{project.description}</p>
+              <p class="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 text-sm lg:text-base leading-relaxed">{project.description}</p>
               
               {/* Technologies */}
               <div class="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-sm">
+                  <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded text-sm">
                     {tech}
                   </span>
                 ))}
@@ -160,26 +215,29 @@ function ProjectsPage() {
               <div class="flex space-x-3">
                 <a
                   href={project.github}
-                  class="flex-1 text-center py-2 px-4 border-2 border-amber-600 text-amber-600 rounded-lg hover:bg-amber-600 hover:text-white transition-colors font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center py-2 px-4 border-2 border-amber-600 text-amber-600 rounded-lg hover:bg-amber-600 hover:text-white transition-colors font-medium cursor-pointer"
                 >
                   Code
                 </a>
-                <a
-                  href={project.demo}
-                  class="flex-1 text-center py-2 px-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
+                <button
+                  onClick={() => window.open(project.demo === '#' ? project.github : project.demo, '_blank')}
+                  class="flex-1 text-center py-2 px-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium cursor-pointer"
                 >
-                  Demo
-                </a>
+                  {project.demo === '#' ? 'View' : 'Demo'}
+                </button>
               </div>
             </div>
           </div>
-        ))}
+          ))
+        )}
       </section>
 
       {/* Call to Action */}
-      <section class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 text-center">
-        <h2 class="text-3xl font-bold text-slate-800 mb-4">Want to See More?</h2>
-        <p class="text-slate-600 mb-6 max-w-2xl mx-auto">
+      <section class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-8 text-center">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">Want to See More?</h2>
+        <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
           These are just a few highlights from my portfolio. I'm always working on new projects 
           and exploring different technologies. Check out my GitHub for more code samples and contributions.
         </p>

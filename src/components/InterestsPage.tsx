@@ -114,8 +114,8 @@ function InterestsPage() {
   return (
     <div class="space-y-6 lg:space-y-8 px-4">
       <section class="text-center">
-        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-monokai-50 mb-3 lg:mb-4">My Interests</h1>
-        <p class="text-base lg:text-xl text-slate-600 dark:text-monokai-200 max-w-2xl mx-auto leading-relaxed">
+        <h1 class="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-white mb-3 lg:mb-4">My Interests</h1>
+        <p class="text-base lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
           Beyond coding, I have a variety of interests that keep me curious and motivated. 
           These hobbies and passions often inspire my work and help me approach problems 
           from different perspectives.
@@ -124,20 +124,20 @@ function InterestsPage() {
 
       {/* Interests by Category */}
       {interests.map((category) => (
-        <section class="bg-white dark:bg-monokai-900 rounded-2xl p-4 lg:p-8 shadow-lg">
-          <h2 class="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-monokai-50 mb-6 lg:mb-8 text-center flex items-center justify-center">
+        <section class="bg-white dark:bg-slate-800 rounded-2xl p-4 lg:p-8 shadow-lg">
+          <h2 class="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-white mb-6 lg:mb-8 text-center flex items-center justify-center">
             <span class="mr-3 text-3xl lg:text-4xl">{category.icon}</span>
             {category.category}
           </h2>
           
           <div class="grid md:grid-cols-2 gap-6">
             {category.items.map((item) => (
-              <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 rounded-xl p-6 hover:shadow-md transition-shadow duration-300">
                 <div class="flex items-start space-x-4">
                   <div class="text-3xl flex-shrink-0">{item.icon}</div>
                   <div>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-2">{item.title}</h3>
-                    <p class="text-slate-600 leading-relaxed">{item.description}</p>
+                    <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">{item.title}</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -147,63 +147,63 @@ function InterestsPage() {
       ))}
 
       {/* Current Goals */}
-      <section class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8">
-        <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Current Goals</h2>
+      <section class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Current Goals</h2>
         
         <div class="grid md:grid-cols-3 gap-6">
           <div class="text-center">
             <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">🔒</span>
             </div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Master Cybersecurity</h3>
-            <p class="text-slate-600">Deepen expertise in penetration testing and security analysis</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">Master Cybersecurity</h3>
+            <p class="text-slate-600 dark:text-slate-300">Deepen expertise in penetration testing and security analysis</p>
           </div>
           
           <div class="text-center">
             <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">🎓</span>
             </div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Complete BSc IT</h3>
-            <p class="text-slate-600">Excel in my studies at North-West University with focus on security</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">Complete BSc IT</h3>
+            <p class="text-slate-600 dark:text-slate-300">Excel in my studies at North-West University with focus on security</p>
           </div>
           
           <div class="text-center">
             <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-2xl">🌟</span>
             </div>
-            <h3 class="text-xl font-semibold text-slate-800 mb-2">Contribute More</h3>
-            <p class="text-slate-600">Increase open source contributions and help the developer community</p>
+            <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-2">Contribute More</h3>
+            <p class="text-slate-600 dark:text-slate-300">Increase open source contributions and help the developer community</p>
           </div>
         </div>
       </section>
 
       {/* Fun Facts */}
-      <section class="bg-white rounded-2xl p-8 shadow-lg">
-        <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Fun Facts About Me</h2>
+      <section class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Fun Facts About Me</h2>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="text-center p-4">
             <div class="text-4xl mb-2">🔒</div>
             <div class="text-2xl font-bold text-amber-600">27</div>
-            <div class="text-slate-600">GitHub repositories</div>
+            <div class="text-slate-600 dark:text-slate-300">GitHub repositories</div>
           </div>
           
           <div class="text-center p-4">
             <div class="text-4xl mb-2">🎓</div>
             <div class="text-2xl font-bold text-amber-600">BSc IT</div>
-            <div class="text-slate-600">Currently studying at NWU</div>
+            <div class="text-slate-600 dark:text-slate-300">Currently studying at NWU</div>
           </div>
           
           <div class="text-center p-4">
             <div class="text-4xl mb-2">🌍</div>
             <div class="text-2xl font-bold text-amber-600">5</div>
-            <div class="text-slate-600">Countries visited</div>
+            <div class="text-slate-600 dark:text-slate-300">Countries visited</div>
           </div>
           
           <div class="text-center p-4">
             <div class="text-4xl mb-2">�</div>
             <div class="text-2xl font-bold text-amber-600">1</div>
-            <div class="text-slate-600">Game in development</div>
+            <div class="text-slate-600 dark:text-slate-300">Game in development</div>
           </div>
         </div>
       </section>
